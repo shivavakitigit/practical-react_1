@@ -17,7 +17,7 @@ import ReactDOM from 'react-dom'
 
 // Import our top-level component.
 import App from 'components/App'
-
+console.log("ggg")
 // Mount our app.
 ReactDOM.render(
   <React.StrictMode>
