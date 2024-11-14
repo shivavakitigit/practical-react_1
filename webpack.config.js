@@ -451,7 +451,7 @@ module.exports = (env, argv) => ({
     open: true,
 
     // http://bit.ly/2WFzCkq
-    port: DEV_SERVER_PORT,
+    port: DEV_SERVER_PORT || 3000,
 
     /*
       http://bit.ly/2WIXOSV, http://bit.ly/2WDMWpv

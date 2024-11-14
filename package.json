@@ -59,8 +59,15 @@
     "start": "cross-env NODE_ENV=development webpack serve --mode development --progress"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.7",
+    "@mui/material": "^6.1.7",
+    "@radix-ui/react-toast": "^1.2.2",
     "antd": "^5.21.6",
     "bootstrap": "^5.3.3",
+    "lucide-react": "^0.456.0",
+    "react-beautiful-dnd": "^13.1.1",
     "react-refresh": "^0.14.2",
     "react-router-dom": "^6.28.0"
   }

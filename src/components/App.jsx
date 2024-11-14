@@ -1,77 +1,36 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from '../components/Login/Login';
 import SignUp from '../components/SignUp/SignUp';
-import DashBoard from '../components/DashBoard/DashBoard'
-import { BrowserRouter, Router, Routes, Route } from 'react-router-dom';
+import DashBoard from '../components/DashBoard/DashBoard';
 import Cart from './Cart/Cart';
 import WishList from './WishList/WishList';
-
-{/* <Login />
-
-<SignUp />
-
-<DashBoard /> */}
-
-// dry
-
-// Before Routing
-
-// function App() {
-//   return (
-//     <>
-
-//       <Login />
-
-//       <SignUp />
-
-//       <DashBoard />
-
-//     </>
-//   )
-// }
-
-// After Routing
+import FormBuilder from './FormBuilder/FormBuilder';
+import Header from './Header';
+import Footer from './Footer';
+import { Container, Box } from '@mui/material';
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
+    <Router>
+      <Header />
+     <Container component="main" maxWidth="lg"  sx={{ flexGrow: 1, my: 4 }}>
+        <Box my={4}>
+          <Routes>
+            <Route path="/" element={<FormBuilder />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/wishlist" element={<WishList />} />
+            <Route path="/account-creation" element={<FormBuilder />} />
+          </Routes>
+        </Box>
+      </Container> 
+      <Footer />
+      
 
-
-        <Routes>
-
-          <Route path='/' element={<Login />} />
-
-          <Route path='/signup' element={<SignUp />} />
-
-
-
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/wishList' element={<WishList />} />
-        </Routes>
-      </BrowserRouter>
-
-
-    </>
-  )
+    </Router>
+  );
 }
 
-
-
-
-
 export default App;
-
-// https://www.myntra.com/wishlist
-
-// path = '/'  default     https://www.flipkart.com/
-
-// path = '/SignUp' SingUp     https://www.flipkart.com/account/login?signup=true&ret=/
-
-// path = 'Dashboard' Dashboard
-
-
-// https://www.myntra.com/login
-
-
-// https://www.myntra.com/checkout/cart
