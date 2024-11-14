@@ -1,4 +1,1 @@
-# practical-react_1
-
-
-hi this is my first comments
+This project was created with [Create New App](https://github.com/qodesmith/create-new-app).
