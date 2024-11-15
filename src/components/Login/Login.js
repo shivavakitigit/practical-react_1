@@ -108,27 +108,30 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
-const [mobileNumber, udpateMobileNumber] = useState('')
+  const [mobileNumber, udpateMobileNumber] = useState('')
   const navigate = useNavigate();
+  const productPrice = 2350;
 
 
-  function handleChange(event){
-event.target.value
+  console.log(productPrice, "productPrice")
 
-console.log(event.target.value)
+  function handleChange(event) {
+    event.target.value
 
-udpateMobileNumber(event.target.value)
+    console.log(event.target.value)
+
+    udpateMobileNumber(event.target.value)
 
 
 
   }
 
 
-  function handleLogin(){
-    if(mobileNumber ==="shiva"){
+  function handleLogin() {
+    if (mobileNumber === "shiva") {
       navigate('./cart')
-    }else{
-     navigate('./wishList')
+    } else {
+      navigate('./wishList')
     }
   }
   return (
@@ -138,7 +141,7 @@ udpateMobileNumber(event.target.value)
 
       MobileNumber
       <input type='text' onChange={handleChange} />
-
+      hi this is for Html{productPrice}
       <button onClick={handleLogin}>Login</button>
     </>
   )

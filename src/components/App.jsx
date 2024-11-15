@@ -17,12 +17,12 @@ function App() {
      <Container component="main" maxWidth="lg"  sx={{ flexGrow: 1, my: 4 }}>
         <Box my={4}>
           <Routes>
-            <Route path="/" element={<FormBuilder />} />
-            <Route path="/login" element={<Login />} />
+            {/* <Route path="/" element={<FormBuilder />} /> */}
+            <Route path="/" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/wishlist" element={<WishList />} />
-            <Route path="/account-creation" element={<FormBuilder />} />
+            <Route path="/account-creation" element={<FormBuilder />} />  
           </Routes>
         </Box>
       </Container> 
